@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>IX AI TOOL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            text-align: center;
+            padding: 20px;
+        }
+        textarea, select {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <main>
-        <button id="recordButton">Start Recording</button>
-        <button id="stopButton">Stop Recording</button>
-        <div id="summary"></div>
-    </main>
+    <h1>IX AI TOOL</h1>
+    <textarea id="meetingText" placeholder="أدخل نص الاجتماع أو قم بتسجيله..."></textarea><br>
+    <select id="jobPosition">
+        <option value="manager">مدير</option>
+        <option value="employee">موظف</option>
+        <option value="intern">متدرب</option>
+    </select><br>
+    <button onclick="summarizeMeeting()">تلخيص الاجتماع</button>
+    <button onclick="translateText()">ترجمة النص</button>
+    <button onclick="generateTable()">إنشاء جدول</button>
+    <div id="result"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
